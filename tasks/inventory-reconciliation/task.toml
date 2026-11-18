@@ -1,0 +1,20 @@
+schema_version = "1.4"
+# The agent's /app is collected and re-created inside a separate, fresh verifier
+# container, so the agent cannot tamper with the tests or the test runner.
+artifacts = ["/app"]
+
+[metadata]
+author_name = "Dhristi Palresha"
+difficulty = "medium"
+category = "data-processing"
+tags = ["python", "csv", "data-quality", "outcome-driven"]
+
+[verifier]
+timeout_sec = 600.0
+environment_mode = "separate"
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 900.0
