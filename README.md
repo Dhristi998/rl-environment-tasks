@@ -71,7 +71,7 @@ pip install harbor
 harbor lint tasks/*
 harbor run -p tasks/fortran-amortization-port -a oracle      # should score 1
 harbor run -p tasks/fortran-amortization-port -a nop         # should score 0
-harbor run -p tasks/fortran-amortization-port -a claude-code -m <model>   # a real agent run
+harbor run -p tasks/fortran-amortization-port -a <agent> -m <model>   # a real agent run (see: harbor agent --help)
 ```
 
 Legacy-check requirements for `validate.py`: `gfortran` and `cobc` (GnuCOBOL) on your PATH.
